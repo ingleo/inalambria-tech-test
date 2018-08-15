@@ -47,8 +47,3 @@ mongoose.connect(process.env.URLDB, { useNewUrlParser: true }, (err, res) => {
 app.listen(process.env.PORT, () => {
     console.log('Escuchando puerto', process.env.PORT);
 });
-
-// Server index.html page when request to the root is made
-app.get('/', function(req, res, next) {
-    res.sendfile('./public/index.html')
-})
