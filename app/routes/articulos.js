@@ -67,7 +67,7 @@ articulosRouter.get('/v1/articulos/:id', (req, res) => {
  */
 articulosRouter.put('/v1/articulos/:id', (req, res) => {
     let id = req.params.id;
-    let body = _.pick(req.body, ['nombre', 'unidad_medida', 'nacional']);
+    let body = _.pick(req.body, ['comprado']);
 
     Articulo.findByIdAndUpdate(id, body, { new: true }, (err, articuloDB) => {
         if (err) {

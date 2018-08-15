@@ -7,11 +7,9 @@ let articuloSchema = new Schema({
         type: String,
         required: [true, 'Es necesario ingresar nombre']
     },
-    unidad_medida: {
-        type: String
-    },
-    nacional: {
-        type: Boolean
+    comprado: {
+        type: Boolean,
+        default: false
     }
 }, { collection: 'articulos' });
 
